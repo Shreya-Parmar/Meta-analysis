@@ -6,13 +6,11 @@ library("dplyr")
 library("esc")
 library("esvis")
 library("ggplot2")
-
 setwd("C:/Users/Asus/OneDrive/Desktop")
 #load the csv
 dat_1<- read.csv("Studies with seperate gender.csv")
 dat_1 <- replace(dat_1, is.na(dat_1), 0)
 #dat_1<- dat_1[-c(3),]
-
 **#FOR HbA1c**
 dat_HbA1c<-esc_mean_sd(grp1m = dat_1$HbA1C_M, grp1sd = dat_1$HbA1C_M_SD, grp1n = dat_1$MALE_No,
                        grp2m = dat_1$HbA1C_F, grp2sd = dat_1$HbA1C_F_SD, grp2n = dat_1$FEMALE_No,
@@ -28,9 +26,9 @@ op <- par(cex=.75, font=2)
 text(c(-6.7,-5.5,-4.3,-3.0),res_HbA1c$k+2, c("HbA1c_M", "HbA1c_SD", "HbA1c_M", "HbA1c_SD"))
 text(c(-5.7,-3.7), res_HbA1c$b+14,c("Male", "Female"))
 par(op)
-
 ### add text with Q-value, dfs, p-value, and I^2 statistic
 text(-10, -0.5, pos=4, cex=0.75, bquote(paste(bold("RE Model"))))
+
 text(-10, -1, pos=4, cex=0.77, bquote(paste(bold("Heterogeneity: "), "Q = ",
                                             .(formatC(res_HbA1c$QE, digits=2, format="f")), ", df = ", .(res_HbA1c$k -res_HbA1c$p),
                                             ", p = ", .(formatC(res_HbA1c$QEp, digits=2, format="f")), "; ", I^2, " = ",
