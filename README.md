@@ -1,1 +1,5 @@
-
+**#STUDY OF ASSOCIATION OF SEX AND AGE WITH THE PARAMETERS OF INSULIN RESISTANCE IN TYPE 1 DIABETES"**
+Type 1 diabetes (T1D) is an autoimmune disorder caused by the loss of pancreatic beta cells. “Double diabetes” is when patients with T1D show Insulin Resistance (IR). There are contradicting reports on the relation of sex and age with IR in T1D. This study aims to understand the differences between the parameters of IR in both sexes.
+To look for the association of sex with the parameter of insulin resistance, a meta-analysis was performed. The script used for meta-analysis is uploaded in an R.R file. The random effect model was used to evaluate the differences in parameters between the sexes.
+Since no association of sex was found with the chosen parameters, we decided to look for the correlation of age with these parameters. The script for the same is provided in Pearson correlation.R file. 
+A weak to strong relation was observed while looking at the correlation of age. In males, HbA1c and total cholesterol showed a weak correlation, and triglycerides, insulin dose, BMI, and HDL were strongly correlated with age. In females, triglycerides and total cholesterol showed a weak correlation, HbA1c showed a moderate correlation, and insulin dose, BMI, and HDL were strongly correlated with age.
